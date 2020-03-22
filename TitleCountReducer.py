@@ -21,6 +21,6 @@ for line in sys.stdin:
 
 # TODO
 for  k in wordcount.keys():
-    print('%s\t%s' % (k,wordcount[k])) 
+    print(k,wordcount[k])
 
 # print('%s\t%s' % (  ,  )) print as final output

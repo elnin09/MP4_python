@@ -6,9 +6,15 @@ import operator
 
 # input comes from STDIN
 wordcount = dict()
+
+#sys.stdout = open("file3.txt", "w+")
+#f = open("file2.txt", "r")
+
 for line in sys.stdin:
-    key,mapdata = line.split('\t', 1)
-    mapoutputkey,mapoutputcount = mapdata.split('\t',1)
+    #print(line)
+    mapdata = (line.rstrip('\n')).split('\t',2)
+    #print(mapdata)
+    mapoutputkey,mapoutputcount = mapdata[1],mapdata[2]
     wordcount[mapoutputkey]=int(mapoutputcount)
 
     # TODO
@@ -29,7 +35,7 @@ while(i<5 and i<size):
 ans.sort(key=lambda x: (-x[1], x[0]))
 i=0
 while(i<5):
-    print(ans[i][0])
+    #print(ans[i][0])
     print('%s\t%s' % (ans[i][0],ans[i][1]))
     i+=1   
     # print('%s\t%s' % (  ,  )) print as final output

@@ -6,6 +6,8 @@ import re
 import operator
 
 
+#sys.stdout = open("file.txt", "w+")
+
 stopWordsPath = sys.argv[1]
 delimitersPath = sys.argv[2]
 delimiters = ""

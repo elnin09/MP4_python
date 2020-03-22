@@ -7,6 +7,8 @@ import re
 
 wordcount = dict()
 
+
+
 # input comes from STDIN
 for line in sys.stdin:
     word, count = line.split('\t', 1)
@@ -18,6 +20,6 @@ for line in sys.stdin:
 
 # TODO
 for  k in wordcount.keys():
-    print ('%s\t%s' % (k, wordcount[k]))
+    print ('%s\t%s' % (str(k), str(wordcount[k])))
 
 # print('%s\t%s' % (  ,  )) print as final output

@@ -4,5 +4,7 @@ import sys
 
 
 
+
 for line in sys.stdin:
-       print('%s\t%s' % (1,str(line)) )
+       mapoutputkey,mapoutputcount = line.split('\t', 1)
+       print('%s\t%s' % (1,line.rstrip('\n')) )

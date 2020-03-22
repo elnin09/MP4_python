@@ -2,30 +2,37 @@
 
 import sys
 import string
-
+import re
+import operator
 
 
 stopWordsPath = sys.argv[1]
 delimitersPath = sys.argv[2]
+delimiters = ""
 
-
-# TODO
+#TODO
 with open(stopWordsPath) as f:
-    # TODO
-
-
+    # ,;.?!-:@[](){}_*/
+    data = f.read()
+    stopwords = re.split("\\n|\\s",data)
+    
 
 
 
 
 #TODO 
 with open(delimitersPath) as f:
-    # TODO
+    delimiters=",|;|\.|\?|!|-|:|@|\[|\]|\(|\)|\{|\}|_|\*|\/"
 
 for line in sys.stdin:
-  
     # TODO
-
+    words=re.split(delimiters,line.lower());
+    for word in words:
+        if word not in stopwords and word != '':
+            print('%s\t%s' % (word,"1"))
+            
+            
+            
     # print('%s\t%s' % (  ,  )) pass this output to reducer
 
 

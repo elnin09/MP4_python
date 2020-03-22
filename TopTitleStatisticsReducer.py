@@ -30,11 +30,11 @@ for number in countarray:
     var = var + pow(abs(mean-number),2)
 
 var = var/count
-print('%s\t%s' % ("Mean",mean))
-print('%s\t%s' % ("Sum",sumn)) 
-print('%s\t%s' % ("Min",minn)) 
-print('%s\t%s' % ("Max",maxn)) 
-print('%s\t%s' % ("Var",var))  
+print('%s\t%s' % ("Mean",int(mean)))
+print('%s\t%s' % ("Sum",int(sumn))) 
+print('%s\t%s' % ("Min",int(minn))) 
+print('%s\t%s' % ("Max",int(maxn))) 
+print('%s\t%s' % ("Var",int(var)))  
 
 
 

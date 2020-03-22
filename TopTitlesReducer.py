@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 import sys
-
+import re
+import operator
 
 
 # input comes from STDIN
 wordcount = dict()
 for line in sys.stdin:
     key,mapoutput = line.split('\t', 1)
-    wordcount[mapoutput[0]]=mapoutput[1]
+    wordcount[mapoutput[0]]=int(mapoutput[1])
 
     # TODO
 

@@ -9,18 +9,15 @@ wordcount = dict()
 
 # input comes from STDIN
 for line in sys.stdin:
-    print(line)
-    linesplit=re.split(" ",line)
-    getter = itemgetter(0)
-    getterval = getter(linesplit)
-    if getterval[0] in wordcount.keys():
-        wordcount[getterval[0]] = wordcount[getterval[0]] +1
+    word, count = line.split('\t', 1)
+    if word in wordcount.keys():
+        wordcount[getterval[0]] = wordcount[word] +1
     else:
         wordcount[getterval[0]] = 1
 
 
 # TODO
 for  k in wordcount.keys():
-    print(k,wordcount[k])
+    print ('%s\t%s' % (k, wordcount[k]))
 
 # print('%s\t%s' % (  ,  )) print as final output

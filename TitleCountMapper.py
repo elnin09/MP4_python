@@ -29,7 +29,7 @@ for line in sys.stdin:
     words=re.split(delimiters,line.lower());
     for word in words:
         if word not in stopwords and word != '':
-            print(word,1)
+            print ("%s\t%s" % (word, 1))
             
             
             

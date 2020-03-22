@@ -22,14 +22,14 @@ with open(stopWordsPath) as f:
 
 #TODO 
 with open(delimitersPath) as f:
-    delimiters=",|;|\.|\?|!|-|:|@|\[|\]|\(|\)|\{|\}|_|\*|\/"
+    delimiters=",|;|\.|\?|!|-|:|@|\[|\]|\(|\)|\{|\}|_|\*|\/|\\n| "
 
 for line in sys.stdin:
     # TODO
     words=re.split(delimiters,line.lower());
     for word in words:
         if word not in stopwords and word != '':
-            print('%s\t%s' % (word,"1"))
+            print(word,1)
             
             
             

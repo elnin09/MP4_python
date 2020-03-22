@@ -8,7 +8,7 @@ import operator
 wordcount = dict()
 for line in sys.stdin:
     key,mapdata = line.split('\t', 1)
-    mapoutputkey,mapoutputcount = mapdata.split('-',1)
+    mapoutputkey,mapoutputcount = mapdata.split(' ',1)
     wordcount[mapoutputkey]=int(mapoutputcount)
 
     # TODO

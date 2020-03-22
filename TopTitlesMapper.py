@@ -6,4 +6,4 @@ import sys
 
 for line in sys.stdin:
        mapoutputkey,mapoutputcount = line.split('\t', 1)
-       print('%s\t%s' % (1,str(mapoutputkey)+"-"+str(mapoutputcount)))
+       print('%s\t%s' % (1,str(mapoutputkey)+" "+str(mapoutputcount)))

@@ -4,9 +4,39 @@ import math
 
 
 #TODO
-
+countarray=[]
 for line in sys.stdin:
-    # TODO
+    mapdata = (line.rstrip('\n')).split('\t',2)
+    mapoutputkey,mapoutputcount = mapdata[1],mapdata[2]
+    countarray.append(mapoutputcount)
+    
+mean = 0
+maxn  = 0
+minn  = 10000000
+sumn  = 0
+var = 0
+count = 0
+
+for number in countarray:
+    sumn = sumn+number;
+    count = count+1;
+    if number < minn:
+        minn = number
+    if number > maxn:
+        maxn = number
+mean = sumn/count    
+
+for number in countarray:
+    var = var + pow(abs(mean-number),2)
+
+var = var/count
+print('%s\t%s' % ("Mean",mean))
+print('%s\t%s' % ("Sum",sumn)) 
+print('%s\t%s' % ("Min",minn)) 
+print('%s\t%s' % ("Max",maxn)) 
+print('%s\t%s' % ("Var",var))  
+
+
 
 #TODO
 # print('%s\t%s' % (  ,  )) print as final output

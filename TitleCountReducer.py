@@ -9,6 +9,7 @@ wordcount = dict()
 
 # input comes from STDIN
 for line in sys.stdin:
+    print(line)
     linesplit=re.split(" ",line)
     getter = itemgetter(0,1)
     getterval = getter(linesplit)

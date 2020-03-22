@@ -11,9 +11,9 @@ wordcount = dict()
 for line in sys.stdin:
     word, count = line.split('\t', 1)
     if word in wordcount.keys():
-        wordcount[getterval[0]] = wordcount[word] +1
+        wordcount[word] = wordcount[word] +1
     else:
-        wordcount[getterval[0]] = 1
+        wordcount[word] = 1
 
 
 # TODO

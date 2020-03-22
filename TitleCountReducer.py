@@ -11,7 +11,7 @@ wordcount = dict()
 for line in sys.stdin:
     print(line)
     linesplit=re.split(" ",line)
-    getter = itemgetter(0,1)
+    getter = itemgetter(0)
     getterval = getter(linesplit)
     if getterval[0] in wordcount:
         wordcount[getterval[0]] = wordcount[getterval[0]] +11

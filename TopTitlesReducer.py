@@ -7,8 +7,8 @@ import operator
 # input comes from STDIN
 wordcount = dict()
 for line in sys.stdin:
-    key,mapoutput = line.split('\t', 1)
-    wordcount[mapoutput[0]]=int(mapoutput[1])
+    key,mapoutputkey,mapoutputcount = line.split('\t', 2)
+    wordcount[mapoutputkey]=int(mapoutputcount)
 
     # TODO
 

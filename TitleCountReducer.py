@@ -13,8 +13,8 @@ for line in sys.stdin:
     linesplit=re.split(" ",line)
     getter = itemgetter(0)
     getterval = getter(linesplit)
-    if getterval[0] in wordcount:
-        wordcount[getterval[0]] = wordcount[getterval[0]] +11
+    if getterval[0] in wordcount.keys():
+        wordcount[getterval[0]] = wordcount[getterval[0]] +1
     else:
         wordcount[getterval[0]] = 1
 

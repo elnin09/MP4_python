@@ -8,7 +8,7 @@ countarray=[]
 for line in sys.stdin:
     mapdata = (line.rstrip('\n')).split('\t',2)
     mapoutputkey,mapoutputcount = mapdata[1],mapdata[2]
-    countarray.append(mapoutputcount)
+    countarray.append(int(mapoutputcount))
     
 mean = 0
 maxn  = 0

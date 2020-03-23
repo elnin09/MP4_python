@@ -16,6 +16,12 @@ for line in sys.stdin:
 
 ret = sorted(keydata.items(), key=lambda kv: kv[1] )
 
+counter=0
+for item in ret:
+    item[1]=counter
+    counter=counter+1
+
+
 print(ret)
 
  

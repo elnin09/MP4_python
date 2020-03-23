@@ -2,14 +2,9 @@
 import sys
 
 
-# TODO
 
 
 
 for line in sys.stdin:
-
-       #TODO
-
-
-#TODO
-# print('%s\t%s' % (  ,  )) pass this output to reducer
+       mapoutputkey,mapoutputcount = line.split('\t', 1)
+       print('%s\t%s' % (1,line.rstrip('\n')) )

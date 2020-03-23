@@ -4,14 +4,16 @@ import sys
 
 #TODO
 keydata = dict()
+f = open("fileorphan.txt", "r")
 
-for line in sys.stdin:
+for line in f:
   mapdata = (line.rstrip('\n')).split('\t',2)
-  key,value = mapdata[1],mapdata[2]
+  key,value = int(mapdata[1]),int(mapdata[2])
 
   
   if key in keydata.keys():
-    keydata[key]=keydata[key]+1
+    if(key!=value):
+      keydata[key]=keydata[key]+1
   else:
     if(key == value): 
       keydata[key] = 0

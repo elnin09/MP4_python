@@ -9,9 +9,6 @@ keydata = dict()
 for line in sys.stdin:
   mapdata = (line.rstrip('\n')).split('\t',2)
   key,value = int(mapdata[1]),int(mapdata[2])
-  print("*****")
-  print(key,value)
-  print("*******")
 
   if key in keydata.keys():
     if(key!=value):
@@ -26,7 +23,7 @@ ids = []
 
 for key in keydata.keys():
   if keydata[key] == 0:
-    ids.append(int(key))
+    ids.append(str(key))
 ids.sort()
 
 for id in ids:

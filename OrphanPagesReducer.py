@@ -11,12 +11,15 @@ for line in sys.stdin:
     keydata[key]=keydata[key]+1
   else:
     keydata[key] = 1
+ids = []
 
 for key in keydata.keys():
   if keydata[key] == 1:
-     {
-      print(key)
-     }
+    ids.append(key)
+ids.sort()
+
+for id in ids:
+  print(id)
 
 #TODO
 # print(xx) print as final output

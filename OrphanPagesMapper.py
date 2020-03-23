@@ -2,7 +2,7 @@
 import sys
 import re
 
-sys.stdout = open("fileorphan.txt", "w+")
+#sys.stdout = open("fileorphan.txt", "w+")
 for line in sys.stdin:
   key,value = (line.rstrip('\n')).split(':',1);
   values = re.split(" ",value.lstrip(' '));

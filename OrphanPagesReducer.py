@@ -4,9 +4,9 @@ import sys
 
 #TODO
 keydata = dict()
-f = open("fileorphan.txt", "r")
+#f = open("fileorphan.txt", "r")
 
-for line in f:
+for line in sys.stdin:
   mapdata = (line.rstrip('\n')).split('\t',2)
   key,value = int(mapdata[1]),int(mapdata[2])
 

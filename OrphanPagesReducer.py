@@ -11,7 +11,6 @@ for line in sys.stdin:
   key,value = int(mapdata[1]),int(mapdata[2])
 
   if key in keydata.keys():
-    if(key!=value):
       keydata[key]=keydata[key]+1
       if value not in keydata.keys():
         keydata[value]=0

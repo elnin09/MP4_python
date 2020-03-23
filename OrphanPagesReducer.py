@@ -13,7 +13,11 @@ for line in sys.stdin:
   if key in keydata.keys():
     keydata[key]=keydata[key]+1
   else:
-    keydata[key] = 1
+    if(key == value): 
+      keydata[key] = 0
+    else:
+      keydata[key] = 1
+
 ids = []
 
 for key in keydata.keys():

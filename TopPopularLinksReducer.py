@@ -27,14 +27,14 @@ ret = sorted(wordcount.items(), key=lambda kv: kv[1] )
 size = len(ret)
 i=0
 ans = list()
-while(i<5 and i<size):
+while(i<10 and i<size):
     ans.append(ret[size-i-1])
     #print ret[size-i-1]
     i+=1
     
 ans.sort(key=lambda x: (x[0],x[1]))
 i=0
-while(i<5):
+while(i<10):
     #print(ans[i][0])
     print('%s\t%s' % (ans[i][0],ans[i][1]))
     i+=1   

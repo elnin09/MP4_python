@@ -9,8 +9,10 @@ keydata = dict()
 for line in sys.stdin:
   mapdata = (line.rstrip('\n')).split('\t',2)
   key,value = int(mapdata[1]),int(mapdata[2])
+  print("*****")
+  print(key,value)
+  print("*******")
 
-  
   if key in keydata.keys():
     if(key!=value):
       keydata[key]=keydata[key]+1

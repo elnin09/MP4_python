@@ -9,7 +9,7 @@ for line in sys.stdin:
 
   print('%s\t%s' % (key,key))
   for i in values:
-    print('%s\t%s' % (i,key))
+    print('%s\t%s\t%s' % (1,i,key))
 
   # TODO
   

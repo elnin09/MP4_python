@@ -6,7 +6,11 @@ import sys
 keydata = dict()
 
 for line in sys.stdin:
-  key,value = (line.rstrip('\n')).split('\t',1)
+  mapdata = (line.rstrip('\n')).split('\t',2)
+  
+  key,value = mapdata[1],mapdata[2]
+
+  
   if key in keydata.keys():
     keydata[key]=keydata[key]+1
   else:
@@ -19,7 +23,7 @@ for key in keydata.keys():
 ids.sort()
 
 for id in ids:
-  print(id)
+  print(int(id))
 
 #TODO
 # print(xx) print as final output

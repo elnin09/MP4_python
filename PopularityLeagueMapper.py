@@ -15,8 +15,8 @@ with open(leaguePath) as f:
 
 
 for line in sys.stdin:
-       key,value = line.split(':',1);
-       values = re.split(" ",value.lstrip(' '));
+       key,value = re.split(':',line)
+       values = re.split(" ",value.lstrip(' '))
 
        for i in values:
               if i in words:

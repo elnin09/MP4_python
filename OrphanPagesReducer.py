@@ -18,7 +18,7 @@ ids = []
 
 for key in keydata.keys():
   if keydata[key] == 1:
-    ids.append(key)
+    ids.append(int(key))
 ids.sort()
 
 for id in ids:

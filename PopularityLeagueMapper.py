@@ -16,6 +16,8 @@ with open(leaguePath) as f:
 
 for line in sys.stdin:
        data = re.split(':',line)
+       if len(data) <2:
+              continue
        key = data[0]
        value = data[1]
        values = re.split(" ",value.lstrip(' '))

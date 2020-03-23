@@ -27,7 +27,7 @@ for key in keydata.keys():
 ids.sort()
 
 for id in ids:
-  print(int(id))
+  print(id)
 
 #TODO
 # print(xx) print as final output

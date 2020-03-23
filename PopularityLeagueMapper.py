@@ -15,16 +15,10 @@ with open(leaguePath) as f:
 
 
 for line in sys.stdin:
-       data = re.split(':',line)
-       if len(data) <2:
-              continue
-       key = data[0]
-       value = data[1]
-       values = re.split(" ",value.lstrip(' '))
+       key,count = line.split('\t', 1)
 
-       for i in values:
-              if i in words:
-                     print('%s\t%s\t%s' % (1,i,key.rstrip('\n')))
+       if key in words:
+              print('%s\t%s\t%s' % (1,key,count.rstrip('\n')))
 
        #TODO
 

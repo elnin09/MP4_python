@@ -7,8 +7,7 @@ keydata = dict()
 
 for line in sys.stdin:
   mapdata = (line.rstrip('\n')).split('\t',2)
-  
-  key,value = mapdata[1],mapdata[2]
+  key,value = mapdata[1],mapdata
 
   
   if key in keydata.keys():

@@ -25,10 +25,11 @@ while(i<size):
     #print ret[size-i-1]
     i+=1
 
+retlist = [list(elem) for elem in ans]
 
 counter=0
-for counter in range(1,len(ans)):
-     ans[counter-1][1] = counter-1
+for counter in range(1,len(retlist)):
+     retlist[counter-1][1] = counter-1
      counter=counter+1
 
 

@@ -21,7 +21,7 @@ for line in sys.stdin:
 ids = []
 
 for key in keydata.keys():
-  if keydata[key] == 1:
+  if keydata[key] == 0:
     ids.append(int(key))
 ids.sort()
 

@@ -28,18 +28,18 @@ while(i<size):
 retlist = [list(elem) for elem in ans]
 retlist.reverse()
 
-print(retlist)
+#print(retlist)
 
 retlistcopy = list()
 
-print(retlistcopy)
+#print(retlistcopy)
 
 for counter in range(1,len(retlist)+1):
      retlistcopy.append(retlist[counter-1][1])
-     print(counter)
-     print(retlist)
-     print(retlistcopy)
-     print("*************************")
+     #print(counter)
+     #print(retlist)
+     #print(retlistcopy)
+     #print("*************************")
      if counter >  1 and (retlistcopy[counter-1] == retlistcopy[counter-2]):
          retlist[counter-1][1] = retlist[counter-2][1]
      else:
@@ -48,7 +48,9 @@ for counter in range(1,len(retlist)+1):
 
 retlist.sort(key=lambda x: (x[0],x[1]))
 
-print(retlist)
+size = len(retlist)
+for counter in range(1,len(retlist)+1):
+    print('%s\t%s' % (retlist[len - counter][0],retlist[len-counter][1]))
 
  
 

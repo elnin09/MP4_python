@@ -31,11 +31,10 @@ counter=0
 
 retlistcopy = retlist
 
-retlist[0][1]=0;
 
-for counter in range(2,len(retlist)):
+for counter in range(1,len(retlist)):
      retlist[counter-1][1] = counter-1
-     if(retlistcopy[counter-1]==retlistcopy[counter-2]):
+     if counter >  1 and (retlistcopy[counter-1]==retlistcopy[counter-2]):
          retlist[counter-1] = retlist[counter-2]
      counter=counter+1
 

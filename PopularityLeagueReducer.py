@@ -30,7 +30,7 @@ retlist.reverse()
 
 print(retlist)
 
-retlistcopy = retlist.copy()
+retlistcopy = list(retlist)
 
 print(retlistcopy)
 

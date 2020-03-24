@@ -7,7 +7,7 @@ keydata = dict()
 # input comes from STDIN
 for line in sys.stdin:
     mapdata = (line.rstrip('\n')).split('\t',2)
-    key,value = int(mapdata[1]),int(mapdata[2])
+    key,value = mapdata[1],int(mapdata[2])
     keydata[key]=value
 
 

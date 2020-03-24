@@ -30,11 +30,11 @@ retlist.reverse()
 
 print(retlist)
 
-retlistcopy = retlist
+retlistcopy = retlist.copy()
 
 print(retlistcopy)
 
-for counter in range(1,len(retlist)):
+for counter in range(1,len(retlist)+1):
      retlist[counter-1][1] = counter-1
      print(counter)
      print(retlist)

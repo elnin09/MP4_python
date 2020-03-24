@@ -32,9 +32,11 @@ print(retlist)
 
 retlistcopy = retlist
 
+print(retlistcopy)
 
 for counter in range(1,len(retlist)):
      retlist[counter-1][1] = counter-1
+     print(counter,retlist,retlistcopy)
      if counter >  1 and (retlistcopy[counter-1][1]==retlistcopy[counter-2][1]):
          retlist[counter-1][1] = retlist[counter-2][1]
      counter=counter+1

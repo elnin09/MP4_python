@@ -32,7 +32,7 @@ for counter in range(1,len(retlist)):
      retlist[counter-1][1] = counter-1
      counter=counter+1
 
-retlist.sort(key=lambda x: (x[0],x[1]))
+retlist.sort(key=lambda x: (-x[0],x[1]))
 
 print(retlist)
 

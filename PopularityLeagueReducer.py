@@ -50,7 +50,7 @@ retlist.sort(key=lambda x: (x[0],x[1]))
 
 size = len(retlist)
 for counter in range(1,len(retlist)+1):
-    print('%s\t%s' % (retlist[len - counter][0],retlist[len-counter][1]))
+    print('%s\t%s' % (retlist[size - counter][0],retlist[size-counter][1]))
 
  
 

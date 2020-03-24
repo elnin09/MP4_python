@@ -26,8 +26,8 @@ while(i<size):
     i+=1
 
 retlist = [list(elem) for elem in ans]
-retlist.reverse()
-counter=0
+#retlist.reverse()
+
 
 retlistcopy = retlist
 

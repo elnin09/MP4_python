@@ -31,18 +31,19 @@ retlist.reverse()
 print(retlist)
 
 retlistcopy = list()
-retlistcopy.extend(retlist)
 
 print(retlistcopy)
 
 for counter in range(1,len(retlist)+1):
-     retlist[counter-1][1] = counter-1
+     retlistcopy.append(retlist[counter-1][1])
      print(counter)
      print(retlist)
      print(retlistcopy)
      print("*************************")
-     if counter >  1 and (retlistcopy[counter-1][1]==retlistcopy[counter-2][1]):
+     if counter >  1 and (retlistcopy[counter-1] == retlistcopy[counter-2]):
          retlist[counter-1][1] = retlist[counter-2][1]
+     else:
+         retlist[counter-1][1] = counter-1
      counter=counter+1
 
 retlist.sort(key=lambda x: (x[0],x[1]))
